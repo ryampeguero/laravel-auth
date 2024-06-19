@@ -84,6 +84,9 @@
                                     </form>
                                 </div>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('admin.projects.create')}}">Crea un nuovo progetto</a>
+                            </li>
                         @endguest
                     </ul>
                 </div>

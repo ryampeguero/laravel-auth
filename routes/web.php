@@ -26,7 +26,9 @@ Route::middleware('auth')
     ->name('admin.') // inizio di ogni nome delle rotte del gruppo
     ->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-        Route::get('/projects',[ProjectController::class, 'index'])->name('project.index');
+        Route::resource('projects', ProjectController::class);
+        // Route::get('/projects', [ProjectController::class, 'index'])->name('project.index');
+        // Route::get('/projects/create', [ProjectController::class, 'create'])->name('project.create');
     });
 
 require __DIR__ . '/auth.php';

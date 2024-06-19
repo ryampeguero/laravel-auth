@@ -20,7 +20,7 @@
                             <tr>
                                 <th scope="row">{{ $project->id }}</th>
                                 <td>{{ $project->title }}</td>
-                                <td>{{ $project->project }}</td>
+                                <td>{{ $project->description }}</td>
                                 <td>{{ $project->slug }}</td>
                             </tr>
                         @endforeach
