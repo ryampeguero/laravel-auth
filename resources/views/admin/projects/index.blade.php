@@ -37,6 +37,10 @@
                                         <button class="btn btn-danger" type="submit">Elimina</button>
                                     </form>
                                 </td>
+                                <td>
+                                    <a class="btn btn-warning"
+                                        href="{{ route('admin.projects.edit', ['project' => $project->slug]) }}">Modifica</a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
