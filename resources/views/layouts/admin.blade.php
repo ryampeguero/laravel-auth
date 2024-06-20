@@ -63,6 +63,9 @@
                   <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Dashboard
                 </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{route('admin.projects.create')}}">Crea un nuovo progetto</a>
+            </li>
             </ul>
 
 
