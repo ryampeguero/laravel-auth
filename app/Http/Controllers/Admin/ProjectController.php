@@ -15,7 +15,7 @@ class ProjectController extends Controller
     public function index()
     {
         $projectList = Project::all();
-        return view('projects.index', compact('projectList'));
+        return view('admin.projects.index', compact('projectList'));
     }
 
     /**
@@ -23,7 +23,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('projects.create');
+        return view('admin.projects.create');
     }
 
     /**
@@ -42,9 +42,9 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Project $project)
     {
-        //
+        return view('admin.projects.show', compact('project'));
     }
 
     /**
@@ -66,8 +66,9 @@ class ProjectController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        return redirect()->route('admin.projects.index')->with('message', 'Project ' . $project->title . ' è stato eliminato');
     }
 }
