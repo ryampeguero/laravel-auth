@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+        @include('partials.errors')
         <h1>Edita</h1>
         <div class="row">
             <div class="col-2"></div>
